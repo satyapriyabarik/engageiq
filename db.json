@@ -1,35 +1,26 @@
 {
   "dashboard": {
-    "totalCustomers": 248,
-    "atRiskAccounts": 14,
-    "openTasks": 28,
-    "revenueOpportunities": 12,
-    "aiPredictionsToday": 42,
-    "systemHealth": "Operational"
-  },
-
-  "realtimeStats": {
-    "liveIncidents": 3,
-    "activeRecommendations": 8,
-    "websocketConnected": true
+    "customers": 248,
+    "alerts": 14,
+    "tasks": 28,
+    "opportunities": 12,
+    "status": "Active"
   },
 
   "insights": [
     {
       "id": 1,
       "severity": "Critical",
+      "message": "Storage failure risk detected",
       "customer": "ABC Corp",
-      "message": "Storage cluster nearing failure threshold",
-      "confidence": 96,
-      "status": "Pending"
+      "confidence": 96
     },
     {
       "id": 2,
       "severity": "High",
+      "message": "Scaling opportunity identified",
       "customer": "TechNova",
-      "message": "AI detected scaling opportunity",
-      "confidence": 89,
-      "status": "Accepted"
+      "confidence": 89
     }
   ],
 
@@ -37,26 +28,16 @@
     {
       "id": 1,
       "name": "ABC Corp",
-      "healthScore": 62,
-      "riskLevel": "High",
-      "revenue": 45000,
-      "openTasks": 8,
-      "location": {
-        "lat": 12.9716,
-        "lng": 77.5946
-      }
+      "score": 62,
+      "risk": "High",
+      "revenue": 45000
     },
     {
       "id": 2,
       "name": "TechNova",
-      "healthScore": 92,
-      "riskLevel": "Low",
-      "revenue": 23000,
-      "openTasks": 2,
-      "location": {
-        "lat": 19.076,
-        "lng": 72.8777
-      }
+      "score": 92,
+      "risk": "Low",
+      "revenue": 23000
     }
   ],
 
@@ -64,61 +45,33 @@
     {
       "id": 1,
       "title": "Infrastructure Upgrade",
-      "customer": "ABC Corp",
       "score": 91,
       "urgency": "Critical",
-      "revenuePotential": 25000
+      "revenue": 25000
     },
     {
       "id": 2,
       "title": "Database Optimization",
-      "customer": "TechNova",
       "score": 73,
       "urgency": "Medium",
-      "revenuePotential": 12000
+      "revenue": 12000
     }
   ],
 
   "tasks": [
     {
       "id": 1,
-      "title": "Replace Storage Cluster",
-      "customer": "ABC Corp",
+      "title": "Replace Storage",
       "priority": "Critical",
       "status": "Open",
-      "assignedEngineer": "Satya"
+      "engineer": "Satya"
     },
     {
       "id": 2,
       "title": "Database Review",
-      "customer": "TechNova",
       "priority": "Medium",
-      "status": "In Progress",
-      "assignedEngineer": "Rahul"
-    }
-  ],
-
-  "notifications": [
-    {
-      "id": 1,
-      "title": "Critical SLA Warning",
-      "description": "ABC Corp maintenance overdue"
-    },
-    {
-      "id": 2,
-      "title": "AI Opportunity Created",
-      "description": "Infrastructure upgrade recommended"
-    }
-  ],
-
-  "activityFeed": [
-    {
-      "id": 1,
-      "event": "AI generated maintenance recommendation"
-    },
-    {
-      "id": 2,
-      "event": "Engineer accepted recommendation"
+      "status": "Progress",
+      "engineer": "Rahul"
     }
   ]
 }
