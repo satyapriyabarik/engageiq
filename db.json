@@ -1,22 +1,82 @@
 {
   "dashboard": {
-    "totalCustomers": 120,
-    "healthyAccounts": 88,
-    "atRiskAccounts": 32,
-    "openTasks": 41,
-    "revenueOpportunities": 18
+    "totalCustomers": 248,
+    "healthyAccounts": 181,
+    "atRiskAccounts": 67,
+    "criticalAccounts": 14,
+    "openTasks": 92,
+    "completedTasks": 314,
+    "revenueOpportunities": 43,
+    "monthlyRevenueImpact": 420000,
+    "slaBreaches": 6,
+    "activeEngineers": 28,
+    "aiPredictionsToday": 187,
+    "maintenanceAlerts": 34,
+    "uptime": "99.92%",
+    "systemHealth": "Operational"
+  },
+
+  "realtimeStats": {
+    "liveIncidents": 12,
+    "activeRecommendations": 47,
+    "openCriticalAlerts": 8,
+    "newEventsPerMinute": 32,
+    "aiEngineStatus": "Active",
+    "websocketConnected": true
   },
 
   "insights": [
     {
       "id": 1,
-      "severity": "High",
-      "message": "ABC Corp has 82% churn probability"
+      "type": "risk",
+      "severity": "Critical",
+      "customer": "ABC Corp",
+      "message": "Primary storage cluster approaching failure threshold",
+      "confidence": 96,
+      "recommendedAction": "Immediate SSD replacement recommended",
+      "estimatedRevenueImpact": 85000,
+      "slaRisk": true,
+      "createdAt": "2026-05-07T10:20:00Z",
+      "status": "Pending Review"
     },
     {
       "id": 2,
+      "type": "opportunity",
+      "severity": "High",
+      "customer": "TechNova",
+      "message": "AI detected infrastructure scaling opportunity",
+      "confidence": 89,
+      "recommendedAction": "Upgrade compute nodes within 14 days",
+      "estimatedRevenueImpact": 42000,
+      "slaRisk": false,
+      "createdAt": "2026-05-07T10:35:00Z",
+      "status": "Accepted"
+    },
+    {
+      "id": 3,
+      "type": "maintenance",
       "severity": "Medium",
-      "message": "Storage capacity nearing threshold"
+      "customer": "GlobalFin",
+      "message": "Backup synchronization latency increasing",
+      "confidence": 82,
+      "recommendedAction": "Schedule maintenance window",
+      "estimatedRevenueImpact": 12000,
+      "slaRisk": false,
+      "createdAt": "2026-05-07T11:00:00Z",
+      "status": "In Progress"
+    },
+    {
+      "id": 4,
+      "type": "security",
+      "severity": "Critical",
+      "customer": "SecureOps",
+      "message": "Unusual access patterns detected in production environment",
+      "confidence": 94,
+      "recommendedAction": "Escalate to security operations team",
+      "estimatedRevenueImpact": 120000,
+      "slaRisk": true,
+      "createdAt": "2026-05-07T11:18:00Z",
+      "status": "Escalated"
     }
   ],
 
@@ -24,37 +84,209 @@
     {
       "id": 1,
       "name": "ABC Corp",
+      "industry": "Healthcare",
+      "region": "Bangalore",
       "healthScore": 62,
+      "engagementScore": 71,
+      "riskLevel": "High",
       "opportunities": 4,
       "revenue": 45000,
-      "status": "At Risk"
+      "status": "At Risk",
+      "openTasks": 8,
+      "slaBreaches": 2,
+      "activeProjects": 3,
+      "lastActivity": "2026-05-07T10:40:00Z",
+      "location": {
+        "lat": 12.9716,
+        "lng": 77.5946
+      }
     },
     {
       "id": 2,
       "name": "TechNova",
+      "industry": "FinTech",
+      "region": "Mumbai",
       "healthScore": 92,
+      "engagementScore": 95,
+      "riskLevel": "Low",
       "opportunities": 2,
       "revenue": 23000,
-      "status": "Healthy"
+      "status": "Healthy",
+      "openTasks": 2,
+      "slaBreaches": 0,
+      "activeProjects": 5,
+      "lastActivity": "2026-05-07T09:20:00Z",
+      "location": {
+        "lat": 19.076,
+        "lng": 72.8777
+      }
+    },
+    {
+      "id": 3,
+      "name": "GlobalFin",
+      "industry": "Banking",
+      "region": "Delhi",
+      "healthScore": 74,
+      "engagementScore": 81,
+      "riskLevel": "Medium",
+      "opportunities": 5,
+      "revenue": 76000,
+      "status": "Warning",
+      "openTasks": 5,
+      "slaBreaches": 1,
+      "activeProjects": 4,
+      "lastActivity": "2026-05-07T11:05:00Z",
+      "location": {
+        "lat": 28.7041,
+        "lng": 77.1025
+      }
     }
   ],
 
   "opportunities": [
     {
       "id": 1,
-      "title": "Server Upgrade",
+      "title": "Server Infrastructure Upgrade",
       "customer": "ABC Corp",
       "score": 91,
+      "confidence": 94,
       "revenuePotential": 25000,
-      "urgency": "High"
+      "urgency": "Critical",
+      "priority": "P1",
+      "slaRisk": true,
+      "recommendedBy": "AI Predictive Engine",
+      "recommendedAction": "Upgrade storage infrastructure immediately",
+      "estimatedCompletionDays": 7,
+      "partsRequired": [
+        "SSD Array",
+        "Power Unit",
+        "Cooling Module"
+      ],
+      "inventoryStatus": "Available",
+      "createdAt": "2026-05-07T10:00:00Z"
     },
     {
       "id": 2,
       "title": "Database Optimization",
       "customer": "TechNova",
       "score": 73,
+      "confidence": 81,
       "revenuePotential": 12000,
-      "urgency": "Medium"
+      "urgency": "Medium",
+      "priority": "P2",
+      "slaRisk": false,
+      "recommendedBy": "AI Optimization Engine",
+      "recommendedAction": "Optimize indexing and replication",
+      "estimatedCompletionDays": 14,
+      "partsRequired": [],
+      "inventoryStatus": "N/A",
+      "createdAt": "2026-05-07T10:30:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Security Patch Rollout",
+      "customer": "SecureOps",
+      "score": 96,
+      "confidence": 98,
+      "revenuePotential": 68000,
+      "urgency": "Critical",
+      "priority": "P1",
+      "slaRisk": true,
+      "recommendedBy": "AI Threat Detection Engine",
+      "recommendedAction": "Deploy emergency patch rollout",
+      "estimatedCompletionDays": 2,
+      "partsRequired": [
+        "Security Patch Package"
+      ],
+      "inventoryStatus": "Ready",
+      "createdAt": "2026-05-07T11:10:00Z"
+    }
+  ],
+
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Replace Storage Cluster",
+      "customer": "ABC Corp",
+      "priority": "Critical",
+      "status": "Open",
+      "assignedEngineer": "Satya",
+      "dueDate": "2026-05-09",
+      "slaTimer": "18h Remaining",
+      "comments": 4,
+      "createdAt": "2026-05-07T10:15:00Z"
+    },
+    {
+      "id": 2,
+      "title": "Database Optimization Review",
+      "customer": "TechNova",
+      "priority": "Medium",
+      "status": "In Progress",
+      "assignedEngineer": "Rahul",
+      "dueDate": "2026-05-15",
+      "slaTimer": "5 Days Remaining",
+      "comments": 2,
+      "createdAt": "2026-05-07T09:30:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Emergency Security Patch",
+      "customer": "SecureOps",
+      "priority": "Critical",
+      "status": "Escalated",
+      "assignedEngineer": "Anjali",
+      "dueDate": "2026-05-08",
+      "slaTimer": "6h Remaining",
+      "comments": 8,
+      "createdAt": "2026-05-07T11:20:00Z"
+    }
+  ],
+
+  "notifications": [
+    {
+      "id": 1,
+      "type": "SLA_WARNING",
+      "title": "Critical SLA Breach Risk",
+      "description": "ABC Corp storage maintenance overdue",
+      "timestamp": "2026-05-07T11:15:00Z",
+      "read": false
+    },
+    {
+      "id": 2,
+      "type": "NEW_OPPORTUNITY",
+      "title": "AI Opportunity Created",
+      "description": "Security Patch Rollout opportunity generated",
+      "timestamp": "2026-05-07T11:18:00Z",
+      "read": false
+    },
+    {
+      "id": 3,
+      "type": "TASK_ASSIGNED",
+      "title": "Task Assigned",
+      "description": "Emergency Security Patch assigned to Anjali",
+      "timestamp": "2026-05-07T11:21:00Z",
+      "read": false
+    }
+  ],
+
+  "activityFeed": [
+    {
+      "id": 1,
+      "event": "AI generated new maintenance recommendation",
+      "user": "AI Engine",
+      "timestamp": "2026-05-07T11:20:00Z"
+    },
+    {
+      "id": 2,
+      "event": "Engineer accepted AI recommendation",
+      "user": "Satya",
+      "timestamp": "2026-05-07T11:24:00Z"
+    },
+    {
+      "id": 3,
+      "event": "Realtime infrastructure anomaly detected",
+      "user": "Monitoring System",
+      "timestamp": "2026-05-07T11:26:00Z"
     }
   ]
 }
