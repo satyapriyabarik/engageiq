@@ -1,0 +1,60 @@
+{
+  "dashboard": {
+    "totalCustomers": 120,
+    "healthyAccounts": 88,
+    "atRiskAccounts": 32,
+    "openTasks": 41,
+    "revenueOpportunities": 18
+  },
+
+  "insights": [
+    {
+      "id": 1,
+      "severity": "High",
+      "message": "ABC Corp has 82% churn probability"
+    },
+    {
+      "id": 2,
+      "severity": "Medium",
+      "message": "Storage capacity nearing threshold"
+    }
+  ],
+
+  "customers": [
+    {
+      "id": 1,
+      "name": "ABC Corp",
+      "healthScore": 62,
+      "opportunities": 4,
+      "revenue": 45000,
+      "status": "At Risk"
+    },
+    {
+      "id": 2,
+      "name": "TechNova",
+      "healthScore": 92,
+      "opportunities": 2,
+      "revenue": 23000,
+      "status": "Healthy"
+    }
+  ],
+
+  "opportunities": [
+    {
+      "id": 1,
+      "title": "Server Upgrade",
+      "customer": "ABC Corp",
+      "score": 91,
+      "revenuePotential": 25000,
+      "urgency": "High"
+    },
+    {
+      "id": 2,
+      "title": "Database Optimization",
+      "customer": "TechNova",
+      "score": 73,
+      "revenuePotential": 12000,
+      "urgency": "Medium"
+    }
+  ],
+}
